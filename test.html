@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>hidden component</title>
+
+  <style>
+    #box {
+      width: 500px;
+      height: 500px;
+      background: red;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>hidden component</h1>
+  <button id="one">Toggle display (style change)</button>
+  <button id="two">Toggle display (class change)</button>
+  <div id="box"></div>
+  <script src="../build/build.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var hidden = require('hidden');
+
+    hidden(box, function() {
+      console.log('hidden');
+    })
+
+    one.onclick = function() {
+      if (box.style.display == 'none') {
+        box.removeAttribute('style');
+      } else {
+        box.style.display = "none";
+      }
+    };
+
+    two.onclick = function() {
+      var cls = box.classList;
+      if (cls.contains('hide')) {
+        cls.remove('hide')
+      } else {
+        cls.add('hide');
+      }
+    };
+  </script>
+</body>
+</html>

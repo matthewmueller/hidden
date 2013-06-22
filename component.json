@@ -1,0 +1,16 @@
+{
+  "name": "hidden",
+  "repo": "matthewmueller/hidden",
+  "description": "listen for changes in display:[none|block|inline]",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/mutation-observer": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
